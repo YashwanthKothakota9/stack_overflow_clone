@@ -25,6 +25,7 @@ const Theme = () => {
               width={20}
               height={20}
               alt="Light Mode"
+              className="active-theme"
             />
           ) : (
             <Image
@@ -32,6 +33,7 @@ const Theme = () => {
               width={20}
               height={20}
               alt="Dark Mode"
+              className="active-theme"
             />
           )}
         </MenubarTrigger>
