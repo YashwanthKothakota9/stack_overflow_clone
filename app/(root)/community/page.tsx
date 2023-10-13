@@ -6,6 +6,11 @@ import Link from "next/link";
 import UserCard from "@/components/cards/UserCard";
 import { SearchParamsProps } from "@/types";
 import Pagination from "@/components/shared/Pagination";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Community | Dev Overflow",
+};
 
 const Page = async ({ searchParams }: SearchParamsProps) => {
   const result = await getAllUsers({
@@ -38,7 +43,7 @@ const Page = async ({ searchParams }: SearchParamsProps) => {
         ) : (
           <div className="paragraph-regular text-dark200_light800 mx-auto max-w-4xl text-center">
             <p>No users to show</p>
-            <Link href="/sign-up" className="mt-2 font-bold text-accent-blue">
+            <Link href="/sign-up" className="text-accent-blue mt-2 font-bold">
               Join to be the first!🎉
             </Link>
           </div>
